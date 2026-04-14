@@ -28,7 +28,7 @@ create table address(
 
 create table orders(
 	order_id int primary key,
-    customer_id int,
+    customer_id int not null unique,
     foreign key (customer_id) references customers1(customer_id),
     order_date timestamp default (current_timestamp),
     total_price decimal(19,4) not null
