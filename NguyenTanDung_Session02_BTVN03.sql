@@ -13,7 +13,7 @@ create table customers1(
     customer_age int not null
     check (customer_age > 0),
     customer_phone char(11) not null,
-    email varchar(100) not null
+    email varchar(100) not null unique
 ); 	
 
 create table address(
